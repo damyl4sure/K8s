@@ -7,3 +7,18 @@ parameters:
   skuName: Premium_LRS
   location: eastus
   storageAccount: azure_storage_account_name
+
+---
+apiVersion: storage.k8s.io/v1
+kind: StorageClass
+metadata:
+  annotations:
+  name: azurefile-apems-storageclass2
+parameters:
+  location: northeurope
+  skuName: Standard_LRS
+  storageAccount: azure_storage_account_apems
+provisioner: kubernetes.io/azure-file
+reclaimPolicy: Delete
+allowVolumeExpansion: true
+volumeBindingMode: Immediate
