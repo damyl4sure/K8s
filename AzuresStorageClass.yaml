@@ -1,23 +1,11 @@
 apiVersion: storage.k8s.io/v1
 kind: StorageClass
 metadata:
-  name: azurefile-apems-storageclass
-provisioner: kubernetes.io/azure-file
-parameters:
-  skuName: Premium_LRS
-  location: eastus
-  storageAccount: azure_storage_account_name
-
----
-apiVersion: storage.k8s.io/v1
-kind: StorageClass
-metadata:
-  annotations:
-  name: azurefile-apems-storageclass2
+  name: azurefile-test-storageclass2
 parameters:
   location: northeurope
   skuName: Standard_LRS
-  storageAccount: azure_storage_account_apems
+  storageAccount: azure_storage_account_test
 provisioner: kubernetes.io/azure-file
 reclaimPolicy: Delete
 allowVolumeExpansion: true
