@@ -2,6 +2,8 @@ apiVersion: storage.k8s.io/v1
 kind: StorageClass
 metadata:
   name: azurefile-apems-storageclass
-provisioner: kubernetes.io/azure-disk
+provisioner: kubernetes.io/azure-file
 parameters:
-  storageaccounttype: Standard_LRS
+  skuName: Standard_LRS
+  location: eastus
+  storageAccount: azure_storage_account_name
