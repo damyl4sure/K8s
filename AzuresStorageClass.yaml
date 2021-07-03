@@ -4,6 +4,6 @@ metadata:
   name: azurefile-apems-storageclass
 provisioner: kubernetes.io/azure-file
 parameters:
-  skuName: Standard_LRS
+  skuName: Premium_LRS
   location: eastus
   storageAccount: azure_storage_account_name
